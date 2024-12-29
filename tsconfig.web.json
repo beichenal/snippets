@@ -7,7 +7,8 @@
     "src/preload/*.d.ts",
     "src/renderer/src/components/**/*",
     "src/renderer/src/assets/**/*",
-    "./mock/**/*"
+    "./mock/**/*",
+    "src/renderer/types/**/*"
     ],
   "compilerOptions": {
     "composite": true,
@@ -19,7 +20,8 @@
       "@assets/*":["src/renderer/src/assets/*"],
       "@components/*": ["src/renderer/src/components/*"],
       "@mainPageSrc/*": ["src/renderer/src/pages/main/src/*"],
-      "@mock/*": ["./mock/*"]
+      "@mock/*": ["./mock/*"],
+      "@type/*": ["src/renderer/types/*"]
     }
   }
 }

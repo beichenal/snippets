@@ -17,7 +17,8 @@ export default defineConfig({
         "@assets": resolve("src/renderer/src/assets"),
         "@components": resolve("src/renderer/src/components"),
         "@mainPageSrc": resolve("src/renderer/src/pages/main/src"),
-        "@mock": resolve("./mock")
+        "@mock": resolve("./mock"),
+        "@type": resolve("src/renderer/types")
       }
     },
     plugins: [react()],
