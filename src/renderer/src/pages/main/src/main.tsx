@@ -1,5 +1,5 @@
-import "./assets/main.css";
-import "@mainPageSrc/assets/tailwind.css";
+import "@assets/main.css";
+import "@assets/tailwind.css";
 
 import React from "react";
 import ReactDOM from "react-dom/client";

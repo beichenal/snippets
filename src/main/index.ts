@@ -8,6 +8,8 @@ function createWindow(): void {
   const mainWindow = new BrowserWindow({
     width: 900,
     height: 670,
+    x: 1600,
+    y: 100,
     alwaysOnTop: true,
     show: false,
     autoHideMenuBar: true,
@@ -31,9 +33,9 @@ function createWindow(): void {
   // Load the remote URL for development or the local html file for production.
   if (is.dev && process.env["ELECTRON_RENDERER_URL"]) {
     console.log("ELECTRON_RENDERER_URL", process.env["ELECTRON_RENDERER_URL"]);
-    mainWindow.loadURL(`${process.env["ELECTRON_RENDERER_URL"]}/pages/main/index.html`);
+    mainWindow.loadURL(`${process.env["ELECTRON_RENDERER_URL"]}/src/pages/main/index.html`);
   } else {
-    mainWindow.loadFile(join(__dirname, "../renderer/pages/main/index.html"));
+    mainWindow.loadFile(join(__dirname, "../renderer/src/pages/main/index.html"));
   }
 }
 

@@ -12,17 +12,18 @@ export default defineConfig({
   renderer: {
     resolve: {
       alias: {
-        "@renderer": resolve("src/renderer"),
-        "@pages": resolve("src/renderer/pages"),
-        "@mainPage": resolve("src/renderer/pages/main"),
-        "@mainPageSrc": resolve("src/renderer/pages/main/src")
+        "@renderer": resolve("src/renderer/src"),
+        "@pages": resolve("src/renderer/src/pages"),
+        "@assets": resolve("src/renderer/src/assets"),
+        "@components": resolve("src/renderer/src/components"),
+        "@mainPageSrc": resolve("src/renderer/src/pages/main/src")
       }
     },
     plugins: [react()],
     build: {
       rollupOptions: {
         input: {
-          main: resolve(__dirname, "src/renderer/pages/main/index.html")
+          main: resolve(__dirname, "src/renderer/src/pages/main/index.html")
         }
       }
     }
