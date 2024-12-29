@@ -7,12 +7,15 @@ function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 900,
-    height: 670,
-    transparent: true,
+    // height: 96,
     x: 1600,
     y: 100,
+    frame: false,
+    transparent: true,
+    useContentSize: true,
     alwaysOnTop: true,
     show: false,
+    resizable: false,
     autoHideMenuBar: true,
     ...(process.platform === "linux" ? { icon } : {}),
     webPreferences: {

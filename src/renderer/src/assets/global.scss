@@ -1,3 +1,11 @@
 body {
   @apply bg-black;
 }
+
+.drag {
+  -webkit-app-region: drag;
+}
+
+.nodrag {
+  -webkit-app-region: no-drag;
+}
