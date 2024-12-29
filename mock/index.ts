@@ -8,7 +8,7 @@ export default {
 
     for (let i = 0; i < n; i++) {
       const mockMap = list.reduce((pre, cur) => {
-        let key, v;
+        let key: string, v: unknown;
         if (Array.isArray(cur)) {
           key = cur[0];
           if ("function" === typeof cur[1]) {
