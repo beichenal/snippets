@@ -21,7 +21,8 @@ function createWindow(): void {
     ...(process.platform === "linux" ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, "../preload/index.js"),
-      sandbox: false
+      sandbox: false,
+      devTools: true
     }
   });
 
@@ -39,6 +40,7 @@ function createWindow(): void {
   if (is.dev && process.env["ELECTRON_RENDERER_URL"]) {
     console.log("ELECTRON_RENDERER_URL", process.env["ELECTRON_RENDERER_URL"]);
     mainWindow.loadURL(`${process.env["ELECTRON_RENDERER_URL"]}/src/pages/main/index.html`);
+    mainWindow.webContents.openDevTools();
   } else {
     mainWindow.loadFile(join(__dirname, "../renderer/src/pages/main/index.html"));
   }

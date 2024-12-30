@@ -1,0 +1,9 @@
+.result {
+  @apply  bg-slate-100 mt-2 rounded-lg px-5 py-3 h-0 overflow-y-auto flex-1 hide-scrollbar;
+  .item {
+    @apply text-slate-700 truncate whitespace-nowrap mb-2 px-2 py-1;
+  }
+  .active {
+    @apply bg-orange-400 text-white rounded-md;
+  }
+}

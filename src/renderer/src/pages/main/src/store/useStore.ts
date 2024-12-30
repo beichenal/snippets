@@ -1,11 +1,11 @@
 import { create } from "zustand";
 import { DataType } from "@renderer/types";
-import { mockData } from "@mock/result";
 
 interface State {
   data: DataType[];
+  setData: (data: DataType[]) => void;
 }
 export const useStore = create<State>((set) => ({
-  data: mockData,
+  data: [],
   setData: (data: DataType[]) => set({ data })
 }));
